@@ -1,0 +1,125 @@
+@use '../abstract' as a;
+
+.email-request {
+  grid-template: max-content max-content / 1fr;
+  justify-items: center;
+  align-content: center;
+  gap: 3.5rem;
+  padding: 2rem 0;
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background: url('/assets/images/mobile/image-host.jpg') center no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  @include a.breakpoint(medium) {
+    justify-items: flex-start;
+    gap: 6.5rem;
+    margin-left: 5%;
+
+    &:before {
+      background: url('/assets/images/desktop/bg-pattern-dots.svg') no-repeat bottom 17.5% right -17.5%, url('/assets/images/tablet/image-host.jpg') top right no-repeat;
+      background-size: 25%, auto 80%;
+      opacity: 100;
+    }
+  }
+
+  @include a.breakpoint(large) {
+    &:before {
+      background: url('/assets/images/desktop/bg-pattern-dots.svg') no-repeat bottom 10% right, url('/assets/images/desktop/image-host.jpg') center right no-repeat;
+      background-size: 15%, auto min(70%, 50rem);
+    }
+  }
+
+  &__content {
+    @include a.set-grid-areas(header, locations, form);
+    display: grid;
+    gap: 2.5rem;
+    width: 85%;
+
+    @include a.breakpoint(medium) {
+      grid-template:
+            'header'
+            'form'
+            'locations';
+      width: 40rem;
+      padding: 5.5rem 4rem 0 0;
+      background-color: var(--clr-background);
+    }
+
+    @include a.breakpoint(large) {
+      width: 55rem;
+    }
+  }
+
+  &__text {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+
+    @include a.breakpoint(medium) {
+      gap: 1.5rem;
+      text-align: left;
+    }
+
+    @include a.breakpoint(large) {
+      text-align: left;
+    }
+
+    & :not(:first-child) {
+      max-width: 35rem;
+    }
+
+    &--green {
+      color: var(--clr-primary-color-green-500);
+    }
+  }
+
+  &__logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 45rem;
+
+    @include a.breakpoint(medium) {
+      padding: 2rem 0;
+    }
+
+    & > * {
+      height: 0.85rem;
+
+      @include a.breakpoint(medium) {
+        height: 1.5rem;
+      }
+    }
+  }
+
+  &__form {
+    @include a.breakpoint(medium) {
+      max-width: 35rem;
+    }
+  }
+
+  &__button {
+    @include a.breakpoint(medium) {
+      transform: scale(1.05);
+      width: 35%;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &__text-input {
+    @include a.breakpoint(medium) {
+      position: relative;
+    }
+  }
+}

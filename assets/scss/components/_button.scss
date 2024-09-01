@@ -1,0 +1,12 @@
+.button {
+  padding: 1rem 1.75rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50rem;
+  color: var(--clr-primary-color-blue-950);
+  background-color: var(--clr-primary-color-green-500);
+
+  &:hover {
+    background-color: var(--clr-primary-color-green-300);
+  }
+}

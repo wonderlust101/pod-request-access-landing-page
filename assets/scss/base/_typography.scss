@@ -1,6 +1,28 @@
 @use '../abstract' as a;
 
 h1, h2, h3, h4,
-h5, h6, p {
+h5, h6, p, button, input {
+  font-family: 'Chivo', sans-serif;
+  color: var(--clr-white);
+}
 
+h1 {
+  font-size: 2rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: var(--clr-white);
+
+  @include a.breakpoint(medium) {
+    font-size: 3rem;
+  }
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--clr-primary-color-blue-300);
+
+  @include a.breakpoint(medium) {
+    font-size: 1.15rem;
+  }
 }

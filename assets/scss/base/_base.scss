@@ -3,3 +3,8 @@
 :root {
   @include a.map-to-root(clr, a.$colors);
 }
+
+body {
+  display: grid;
+  background-color: var(--clr-background);
+}

@@ -4,43 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--     <meta name="title" content="title"> -->
-    <!--     <meta name="description" content="description"> -->
+    <meta name="title" content="Pod - Request access now to upload your podcasts.">
+    <meta name="description" content="Upload your podcasts now by requesting access by entering your email. You podcasts wil be uploaded to several
+    platforms such as Spotify, Apple Podcasts, Google Podcasts and Pocket Casts">
 
-    <title>Document</title>
-    <!--         <link rel="icon" href="assets/images/favicon.png" /> -->
+    <title>Frontend Mentor | Pod request access landing page</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
 
     <link rel="stylesheet" href="assets/css/main.css"/>
-
-    <!--Remove later-->
-    <style>
-        @font-face {
-            font-family: 'VT323';
-            src: url('assets/fonts/DotGothic16-Regular.ttf');
-        }
-
-        * {
-            font-family: 'VT323', sans-serif;
-            font-size: 120px;
-        }
-    </style>
-    <!--Remove later-->
 </head>
-<body>
-    <div style="display: grid; height: 100vh;">
-        <div style="width: 100%; background-color:var(--clr-primary-color-star-dust); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-election-night)">新世紀エヴァンゲリオン</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-crackled); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-fading-horizon)">Neon Genesis Evangelion</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-neon-spring); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-iris-royale)">新世紀エヴァンゲリオン</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-iris-royale); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-neon-spring)">Neon Genesis Evangelion</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-fading-horizon); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-crackled)">新世紀エヴァンゲリオン</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-election-night);display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-star-dust)">Neon Genesis Evangelion</h1></div>
-    </div>
+<body class="email-request">
+    <header class="header">
+        <img class="header__logo" src="assets/images/desktop/logo.svg" alt="Pod Logo" aria-label="Pod">
+    </header>
+
+    <main class="email-request__content">
+        <section class="email-request__text">
+            <h1><span class="email-request__text--green">Publish your podcasts</span> everywhere.</h1>
+
+            <p>Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify,
+                Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+        </section>
+
+        <section class="email-request__logos">
+            <h2 class="sr-only">Podcast can be found in:</h2>
+
+            <img src="assets/images/desktop/spotify.svg" alt="Spotify Logo" aria-label="Spotify">
+            <img src="assets/images/desktop/apple-podcast.svg" alt="Apple Podcast Logo" aria-label="Apple Podcast">
+            <img src="assets/images/desktop/google-podcasts.svg" alt="Google Podcast Logo" aria-label="Google Podcast">
+            <img src="assets/images/desktop/pocket-casts.svg" alt="Pocket Cast Logo" aria-label="Pocket Cast">
+        </section>
+
+        <form id="access-request-from" class="email-request__form" novalidate>
+            <div class="text-input email-request__text-input">
+                <label for="email" class="sr-only">Your email address</label>
+                <input class="text-input__field" id="email" type="email" autocomplete="email" spellcheck="false"
+                       placeholder="Email address" required>
+
+                <button class="button email-request__button" type="submit">Request access</button>
+
+                <p class="text-input__status-message" id="email-status">Oops! Please check your email</p>
+            </div>
+        </form>
+    </main>
 
     <script src="assets/scripts/index.js"></script>
 </body>
