@@ -26,7 +26,7 @@
     margin-left: 5%;
 
     &:before {
-      background: url('/assets/images/desktop/bg-pattern-dots.svg') no-repeat bottom 17.5% right -17.5%, url('/assets/images/tablet/image-host.jpg') top right no-repeat;
+      background: url('../images/desktop/bg-pattern-dots.svg') no-repeat bottom 17.5% right -17.5%, url('../images/tablet/image-host.jpg') top right no-repeat;
       background-size: 25%, auto 80%;
       opacity: 100;
     }
@@ -34,7 +34,7 @@
 
   @include a.breakpoint(large) {
     &:before {
-      background: url('/assets/images/desktop/bg-pattern-dots.svg') no-repeat bottom 10% right, url('/assets/images/desktop/image-host.jpg') center right no-repeat;
+      background: url('../images/desktop/bg-pattern-dots.svg') no-repeat bottom 10% right, url('../images/desktop/image-host.jpg') center right no-repeat;
       background-size: 15%, auto min(70%, 50rem);
     }
   }
